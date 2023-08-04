@@ -1,0 +1,272 @@
+/*Загальні стилі*/
+
+:root {
+	--accentcolor: #2033DD;
+	--fon: #d9d9d9;
+}
+
+body {
+	min-width: 320px;
+	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
+}
+.container {
+	padding-right: 0;
+	padding-left: 0;
+}
+ul,ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	display: block;
+}
+
+/*HEADER*/
+header {
+	min-height: 300px;
+}
+.headerfon {
+	background-color: var(--accentcolor);
+}
+.logo {
+	margin-top: 50px;
+}
+.soc-icons {
+	margin-top: 50px;
+	display: flex;
+	justify-content: flex-start;
+}
+.soc-icons a {
+	background-color: var(--fon);
+	width: 70px;
+	height: 55px;
+	margin-left: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	transition: transform .5s ease;
+}
+.soc-icons a:hover {
+	transform: translateY(-20px);
+}
+.soc-icons a i {
+  color: #000;
+  font-size: 28px;
+}
+ul.header-menu {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 120px;
+}
+
+ul.header-menu li {
+ background-color: var(--fon);
+ width: 180px;
+ height: 50px;
+ text-align: center;
+ line-height: 50px;
+ transition: opacity .5s ease-out;
+}
+ul.header-menu li:hover {
+	opacity: 0.5;
+}
+ul.header-menu li a {
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+/*CONTENT*/
+main {
+	margin-top: 50px;
+}
+
+article + article {
+ margin-top: 50px;
+}
+
+article {
+	border-bottom: 2px dashed var(--fon);
+	padding-bottom: 15px;
+}
+article:last-child {
+	border-bottom: none;
+}
+h2.post-title {
+	font-size: 24px;
+	font-weight: 700;
+}
+p.post-text {
+	font-size: 14px;
+}
+a.readmore {
+	text-decoration: none;
+	background-color: var(--accentcolor);
+	border-radius: 8px;
+	width: 180px;
+	height: 60px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+/*SIDEBAR*/
+aside {
+	background-color: var(--fon);
+	padding-top: 20px;
+}
+.widget {
+  min-height: 300px;
+  background-color: var(--accentcolor);
+  margin-top: 40px;
+  padding-top: 35px;
+  text-align: center;
+}
+h3.widget-title {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+ul.widget-list li {
+	margin-top: 15px;
+	position: relative;
+}
+ul.widget-list li:before {
+	content:'\f02e';
+	font-family: 'Font Awesome 5 Free';
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: 39%;
+}
+ul.widget-list li  a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+}
+/*FOOTER*/
+.footerfon {
+	background-color: #000;
+}
+footer {
+	min-height: 300px;
+}
+ul.footer-menu {
+	margin-top: 50px;
+}
+ul.footer-menu li {
+	margin-top: 10px;
+	position: relative;
+}
+ul.footer-menu li:before {
+	content:'\f058';
+	font-family: 'Font Awesome 5 Free';
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: -9%;
+}
+ul.footer-menu li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+}
+.copy {
+	display: flex;
+
+}
+img.copyimg {
+	height: 30px;
+}
+p.copy-text {
+	color: #fff;
+	margin-left: 10px;
+}
+/*BUTTON UP*/
+.up {
+	width: 40px;
+	height: 40px;
+	background-color: var(--accentcolor);
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	transition: opacity .5s ease;
+}
+.up:hover {
+	opacity: .5;
+}
+.up i {
+	color: #fff;
+}
+/*MEDIA QUIERRIES*/
+@media (max-width: 1200px){
+	ul.header-menu li {
+    margin-left: 10px;
+	}
+	ul.widget-list li:before {
+		left: 30%;
+	}
+}
+
+@media (max-width: 580px) {
+	.logo {
+		margin-left: 20px;
+	}
+	ul.header-menu {
+		font-size: 14px;
+	}
+	article {
+		padding-left: 15px;
+	}
+	ul.footer-menu {
+		margin-left: 150px;
+		margin-bottom: 20px;
+	}
+	.copy {
+		margin-left: 50px;
+	}
+	footer .soc-icons {
+		margin-left: 50px;
+	}
+}
+
+@media (max-width: 500px) {
+   ul.header-menu {
+   	flex-direction: column;
+   	margin-left: -10px;
+   }
+   ul.header-menu li {
+   	width: 100%;
+   	margin-top: 10px;
+   }
+}
+@media (max-width: 400px) {
+	footer .soc-icons {
+		margin-left: 20px;
+	}
+	.up {
+		bottom: 50px;
+	}
+}
+@media (max-width: 340px) {
+	footer .soc-icons {
+		margin-left: 10px;
+	}
+	.copy {
+		font-size: 14px;
+	}
+}
